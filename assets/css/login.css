@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300); /* بارگذاری فونت روباتو از گوگل */
+
+/* استایل برای بدنه صفحه */
+body {
+  background: #76b852; /* رنگ پس‌زمینه برای مرورگرهای قدیمی */
+  background: rgb(141,194,111); /* رنگ پس‌زمینه به صورت RGB */
+  background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%); /* گرادیان خطی به سمت راست */
+  font-family: "Roboto", sans-serif; /* تعیین فونت برای متن */
+  -webkit-font-smoothing: antialiased; /* بهبود کیفیت فونت در مرورگرهای وب‌کیت */
+  -moz-osx-font-smoothing: grayscale; /* بهبود کیفیت فونت در مرورگرهای موزیلا */
+}
+
+/* استایل برای صفحه ورود */
+.login-page {
+  width: 360px; /* عرض صفحه ورود */
+  padding: 8% 0 0; /* فاصله داخلی از بالا */
+  margin: auto; /* مرکز کردن صفحه */
+}
+
+/* استایل برای فرم */
+.form {
+  position: relative; /* موقعیت نسبی برای قرارگیری عناصر داخلی */
+  z-index: 1; /* تعیین ترتیب نمایش */
+  background: #FFFFFF; /* رنگ پس‌زمینه فرم */
+  max-width: 360px; /* حداکثر عرض فرم */
+  margin: 0 auto 100px; /* مرکز کردن فرم و فاصله از پایین */
+  padding: 45px; /* فاصله داخلی */
+  text-align: center; /* تراز کردن متن به مرکز */
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); /* سایه برای فرم */
+}
+
+/* استایل برای ورودی‌های فرم */
+.form input {
+  font-family: "Roboto", sans-serif; /* تعیین فونت ورودی‌ها */
+  outline: 0; /* حذف حاشیه پیش‌فرض */
+  background: #f2f2f2; /* رنگ پس‌زمینه ورودی */
+  width: 100%; /* عرض 100% برای ورودی */
+  border: 0; /* حذف حاشیه */
+  margin: 0 0 15px; /* فاصله از ورودی‌های دیگر */
+  padding: 15px; /* فاصله داخلی */
+  box-sizing: border-box; /* شامل کردن padding و border در اندازه */
+  font-size: 14px; /* اندازه فونت ورودی */
+}
+
+/* استایل برای دکمه‌های فرم */
+.form button {
+  font-family: "Roboto", sans-serif; /* تعیین فونت دکمه‌ها */
+  text-transform: uppercase; /* تبدیل متن به حروف بزرگ */
+  outline: 0; /* حذف حاشیه پیش‌فرض */
+  background: #4CAF50; /* رنگ پس‌زمینه دکمه */
+  width: 100%; /* عرض 100% برای دکمه */
+  border: 0; /* حذف حاشیه */
+  padding: 15px; /* فاصله داخلی */
+  color: #FFFFFF; /* رنگ متن دکمه */
+  font-size: 14px; /* اندازه فونت دکمه */
+  -webkit-transition: all 0.3 ease; /* انیمیشن برای تغییرات در مرورگرهای وب‌کیت */
+  transition: all 0.3 ease; /* انیمیشن برای تغییرات */
+  cursor: pointer; /* تغییر نشانگر ماوس به دست */
+}
+
+/* استایل برای حالت hover، active و focus دکمه */
+.form button:hover, .form button:active, .form button:focus {
+  background: #43A047; /* تغییر رنگ پس‌زمینه در حالت hover */
+}
+
+/* استایل برای فرم ثبت‌نام */
+.form .register-form {
+  display: none; /* مخفی کردن فرم ثبت‌نام */
+}
+
+/* استایل برای لینک‌ها در فرم */
+.form .link a {
+  color: #4CAF50; /* رنگ لینک */
+  text-decoration: none; /* حذف زیرخط */
+}
+
+/* استایل برای کانتینر */
+.container {
+  position: relative; /* موقعیت نسبی */
+  z-index: 1; /* ترتیب نمایش */
+  max-width: 300px; /* حداکثر عرض کانتینر */
+  margin: 0 auto; /* مرکز کردن کانتینر */
+}
+
+/* پاک کردن float */
+.container:before, .container:after {
+  content: ""; /* محتوای خالی */
+  display: block; /* نمایش به صورت بلوک */
+  clear: both; /* پاک کردن float */
+}
+
+/* استایل برای اطلاعات داخل کانتینر */
+.container .info {
+  margin: 50px auto; /* فاصله از بالا و مرکز کردن */
+  text-align: center; /* تراز کردن متن به مرکز */
+}
+
+/* استایل برای عنوان اطلاعات */
+.container .info h1 {
+  margin: 0 0 15px; /* فاصله از بالا و پایین */
+  padding: 0; /* حذف فاصله داخلی */
+  font-size: 36px; /* اندازه فونت عنوان */
+  font-weight: 300; /* وزن فونت */
+  color: #1a1a1a; /* رنگ متن عنوان */
+}
+
+/* استایل برای متن کوچک در اطلاعات */
+.container .info span {
+  color: #4d4d4d; /* رنگ متن */
+  font-size: 12px; /* اندازه فونت */
+}
+
+/* استایل برای لینک‌ها در متن کوچک */
+.container .info span a {
+  color: #000000; /* رنگ لینک */
+  text-decoration: none; /* حذف زیرخط */
+}
+
+/* استایل برای آیکون‌ها در متن کوچک */
+.container .info span .fa {
+  color: #EF3B3A; /* رنگ آیکون */
+}

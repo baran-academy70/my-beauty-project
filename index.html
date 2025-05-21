@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" /> <!-- تعیین نوع کاراکترها به UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- سازگاری با مرورگرهای اینترنت اکسپلورر -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- تنظیم نمای صفحه برای دستگاه‌های مختلف -->
+    <title>Cafe Chocolate</title> <!-- عنوان صفحه -->
+    <link rel="stylesheet" href="assets/css/styles.css" /> <!-- لینک به فایل CSS برای استایل‌دهی -->
+  </head>
+  <body>
+
+    <!-- بخش هدر -->
+    <header class="col-12">
+      <div id="header">
+        <!-- بخش لوگو -->
+        <div class="col-2">
+          <div class="logo">
+            <a href="#"><img alt="logo" src="assets/images/logo (2).png" /></a> <!-- تصویر لوگو -->
+          </div>
+        </div>
+        <!-- بخش نوار جستجو -->
+        <div class="col-8">
+          <div class="formss">
+            <div class="inform">
+              <form class="searchbar-form">
+                <button class="search-btn" type="button"> <!-- دکمه جستجو -->
+                  <i class="fa-solid fa-magnifying-glass"></i> <!-- آیکون جستجو -->
+                </button>
+                <input
+                  id="searchInput"
+                  placeholder="جستجو بر اساس نام یا قیمت"
+                  type="search"
+                  class="search-web-input form-control" 
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- بخش آیکون‌های کاربری -->
+        <div class="col-2">
+          <div class="searchbar-left-ic">
+            <a href="assets/links/login.html">
+              <div class="icon2">
+                <i class="fa-regular fa-user"></i> <!-- آیکون کاربر -->
+              </div>
+            </a>
+            <a href="#slidebar">
+              <div class="icon3">
+                <i class="fa-solid fa-cart-shopping"></i> <!-- آیکون سبد خرید -->
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- بخش سبد خرید -->
+    <section id="slidebar">
+      <div class="head">
+        <a href="#"><i class="fa-solid fa-xmark"></i></a> <!-- دکمه بستن سبد خرید -->
+        <h4>سبد خرید</h4> <!-- عنوان سبد خرید -->
+      </div>
+      <hr /> <!-- خط افقی جداکننده -->
+      <div id="products" class="products-container">
+        <!-- محصولات سبد خرید به صورت داینامیک در اینجا رندر می‌شوند -->
+      </div>
+    </section>
+
+    <!-- بخش تصویر تبلیغاتی -->
+    <section id="binPic">
+      <div class="image">
+        <a href="#">
+          <img src="assets/images/bin.jpg" alt="" /> <!-- تصویر تبلیغاتی -->
+        </a>
+      </div>
+    </section>
+
+    <!-- بخش دسته‌بندی‌ها -->
+    <div class="col-12">
+      <div id="category">
+        <div class="title">
+          <h5>دسته بندی ها</h5> <!-- عنوان دسته‌بندی‌ها -->
+          <hr /> <!-- خط افقی جداکننده -->
+        </div>
+        <div class="items">
+          <!-- دسته‌بندی‌ها به صورت داینامیک در اینجا رندر می‌شوند -->
+        </div>
+      </div>
+    </div>
+
+    <!-- بخش محصولات گرم -->
+    <div class="col-12">
+      <section id="warm">
+        <!-- محصولات گرم به صورت داینامیک در اینجا رندر می‌شوند -->
+      </section>
+    </div>
+
+    <!-- بخش محصولات سرد -->
+    <div class="col-12">
+      <section id="cool">
+        <!-- محصولات سرد به صورت داینامیک در اینجا رندر می‌شوند -->
+      </section>
+    </div>
+
+    <!-- بخش بستنی‌ها -->
+    <div class="col-12">
+      <section id="ice">
+        <!-- بستنی‌ها به صورت داینامیک در اینجا رندر می‌شوند -->
+      </section>
+    </div>
+
+    <!-- بخش ساندویچ‌ها -->
+    <div class="col-12">
+      <section id="sandwich">
+        <!-- ساندویچ‌ها به صورت داینامیک در اینجا رندر می‌شوند -->
+      </section>
+    </div>
+
+    <!-- بخش کیک‌ها -->
+    <div class="col-12">
+      <section id="cake">
+        <!-- کیک‌ها به صورت داینامیک در اینجا رندر می‌شوند -->
+      </section>
+    </div>
+
+<footer class="footer"> <!-- شروع بخش فوتر -->
+    <div class="footer-content"> <!-- محتوای فوتر -->
+        <div class="footer-section"> <!-- بخش اول فوتر -->
+            <h4>درباره ما</h4> <!-- عنوان بخش درباره ما -->
+            <p>کافه شکلات، محلی دنج برای لحظات خوش شما. با بهترین مواد اولیه و پرسنل مجرب در خدمت شما هستیم.</p> <!-- توضیحات درباره کافه -->
+        </div>
+        
+        <div class="footer-section"> <!-- بخش دوم فوتر -->
+            <h4>ساعات کاری</h4> <!-- عنوان بخش ساعات کاری -->
+            <ul> <!-- لیست ساعات کاری -->
+                <li>شنبه تا چهارشنبه: 8 صبح تا 11 شب</li> <!-- ساعت کاری روزهای شنبه تا چهارشنبه -->
+                <li>پنج‌شنبه و جمعه: 9 صبح تا 12 شب</li> <!-- ساعت کاری روزهای پنج‌شنبه و جمعه -->
+            </ul>
+        </div>
+        
+        <div class="footer-section"> <!-- بخش سوم فوتر -->
+            <h4>تماس با ما</h4> <!-- عنوان بخش تماس با ما -->
+            <ul> <!-- لیست اطلاعات تماس -->
+                <li><i class="fa-solid fa-phone"></i> 021-12345678</li> <!-- شماره تلفن -->
+                <li><i class="fa-solid fa-location-dot"></i> تهران، خیابان ولیعصر</li> <!-- آدرس -->
+                <li><i class="fa-solid fa-envelope"></i> info@cafechocolate.com</li> <!-- ایمیل -->
+            </ul>
+        </div>
+        
+        <div class="footer-section"> <!-- بخش چهارم فوتر -->
+            <h4>شبکه‌های اجتماعی</h4> <!-- عنوان بخش شبکه‌های اجتماعی -->
+            <div class="social-links"> <!-- لینک‌های اجتماعی -->
+                <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a> <!-- لینک به اینستاگرام -->
+                <a href="#" class="social-link"><i class="fa-brands fa-telegram"></i></a> <!-- لینک به تلگرام -->
+                <a href="#" class="social-link"><i class="fa-brands fa-whatsapp"></i></a> <!-- لینک به واتس‌اپ -->
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom"> <!-- بخش پایینی فوتر -->
+        <p>تمامی حقوق برای کافه شکلات محفوظ است &copy; 1402</p> <!-- حقوق کپی رایت -->
+    </div>
+</footer> <!-- پایان بخش فوتر -->
+</body>
+<script src="assets/js/main.js"></script> <!-- لینک به فایل جاوا اسکریپت -->
+</html> <!-- پایان سند HTML -->

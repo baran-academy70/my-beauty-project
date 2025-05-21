@@ -1,0 +1,96 @@
+<!DOCTYPE html> <!-- مشخص می‌کند که این سند HTML5 است -->
+<html lang="fa" dir="rtl"> <!-- تعیین زبان صفحه به فارسی و جهت راست به چپ -->
+<head>
+    <meta charset="UTF-8"> <!-- تنظیم مجموعه کاراکترها به UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- تنظیم viewport برای طراحی واکنش‌گرا -->
+    <title>ثبت نام</title> <!-- عنوان صفحه که در نوار عنوان مرورگر نمایش داده می‌شود -->
+    <style>
+        body { /* استایل برای بدنه صفحه */
+            font-family: Arial, sans-serif; /* تعیین نوع فونت برای متن */
+            display: flex; /* استفاده از Flexbox برای چینش عناصر */
+            justify-content: center; /* مرکز چینش افقی عناصر */
+            align-items: center; /* مرکز چینش عمودی عناصر */
+            height: 100vh; /* ارتفاع 100% از نمای دید (viewport) */
+            margin: 0; /* حذف حاشیه‌های پیش‌فرض مرورگر */
+            background-color: #f0f2f5; /* رنگ پس‌زمینه صفحه */
+        }
+    
+        .signup-container { /* استایل برای بخش ثبت نام */
+            background-color: white; /* رنگ پس‌زمینه سفید برای کادر ثبت نام */
+            padding: 20px; /* فاصله داخلی از تمام طرف‌ها */
+            border-radius: 8px; /* گرد کردن گوشه‌های کادر */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* سایه برای عمق دادن به کادر */
+            width: 100%; /* عرض 100% از فضای موجود */
+            max-width: 400px; /* حداکثر عرض 400px */
+        }
+    
+        .form-group { /* استایل برای گروه‌های فرم */
+            margin-bottom: 15px; /* فاصله پایین بین گروه‌ها */
+        }
+    
+        label { /* استایل برای برچسب‌ها */
+            display: block; /* نمایش برچسب به صورت بلوک */
+            margin-bottom: 5px; /* فاصله پایین از برچسب */
+        }
+    
+        input { /* استایل برای فیلدهای ورودی */
+            width: 100%; /* عرض 100% برای فیلدها */
+            padding: 8px; /* فاصله داخلی از تمام طرف‌ها */
+            border: 1px solid #ddd; /* حاشیه خاکستری روشن */
+            border-radius: 4px; /* گرد کردن گوشه‌های فیلدها */
+            box-sizing: border-box; /* شامل حاشیه و فاصله داخلی در اندازه کلی */
+        }
+    
+        button { /* استایل برای دکمه‌ها */
+            width: 100%; /* عرض 100% برای دکمه‌ها */
+            padding: 10px; /* فاصله داخلی از تمام طرف‌ها */
+            background-color: #4CAF50; /* رنگ پس‌زمینه سبز */
+            color: white; /* رنگ متن سفید */
+            border: none; /* حذف حاشیه */
+            border-radius: 4px; /* گرد کردن گوشه‌های دکمه‌ها */
+            cursor: pointer; /* تغییر نشانگر ماوس به دست */
+        }
+    
+        button:hover { /* استایل دکمه در حالت هاور (ماوس روی دکمه) */
+            background-color: #45a049; /* تغییر رنگ پس‌زمینه در هاور */
+        }
+    
+        .error { /* استایل برای پیام‌های خطا */
+            color: red; /* رنگ متن قرمز برای پیام‌های خطا */
+            font-size: 14px; /* اندازه فونت پیام‌های خطا */
+        }
+    </style>
+    
+    
+</head>
+
+<body>
+    <div class="signup-container"> <!-- بخش اصلی ثبت نام -->
+        <h2>ثبت نام کاربر جدید</h2> <!-- عنوان صفحه ثبت نام -->
+        <form id="signupForm"> <!-- آغاز فرم ثبت نام -->
+            <div class="form-group"> <!-- گروه فرم برای نام و نام خانوادگی -->
+                <label for="fullname">نام و نام خانوادگی:</label> <!-- برچسب برای فیلد نام و نام خانوادگی -->
+                <input type="text" id="fullname" required> <!-- فیلد ورودی برای نام و نام خانوادگی -->
+            </div>
+            <div class="form-group"> <!-- گروه فرم برای نام کاربری -->
+                <label for="username">نام کاربری:</label> <!-- برچسب برای فیلد نام کاربری -->
+                <input type="text" id="username" required> <!-- فیلد ورودی برای نام کاربری -->
+            </div>
+            <div class="form-group"> <!-- گروه فرم برای ایمیل -->
+                <label for="email">ایمیل:</label> <!-- برچسب برای فیلد ایمیل -->
+                <input type="email" id="email" required> <!-- فیلد ورودی برای ایمیل -->
+            </div>
+            <div class="form-group"> <!-- گروه فرم برای رمز عبور -->
+                <label for="password">رمز عبور:</label> <!-- برچسب برای فیلد رمز عبور -->
+                <input type="password" id="password" required> <!-- فیلد ورودی برای رمز عبور -->
+            </div>
+            <div class="form-group"> <!-- گروه فرم برای تکرار رمز عبور -->
+                <label for="confirmPassword">تکرار رمز عبور:</label> <!-- برچسب برای فیلد تکرار رمز عبور -->
+                <input type="password" id="confirmPassword" required> <!-- فیلد ورودی برای تکرار رمز عبور -->
+            </div>
+            <button type="button" onclick="alert('ثبت نام با موفقیت انجام شد'); window.location.href= '../../index.html';">ثبت نام</button> <!-- دکمه ثبت نام و عملکرد آن -->
+        </form> <!-- پایان فرم ثبت نام -->
+    </div> <!-- پایان بخش ثبت نام -->
+</body>
+
+</html>

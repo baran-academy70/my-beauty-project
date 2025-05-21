@@ -1,0 +1,1407 @@
+@import "../icons/css/all.css"; /* وارد کردن آیکون‌ها از مسیر مشخص شده */
+
+/* تعریف فونت سفارشی "Vazir" */
+@font-face {
+  font-family: "Vazir"; /* نام فونت */
+  src: url("../fonts/vazir-font-v18.0.0/Vazir-Medium.woff2") format("woff2"), /* منبع فونت با فرمت woff2 */
+       url("../fonts/vazir-font-v18.0.0/Vazir-Medium.woff") format("woff"), /* منبع فونت با فرمت woff */
+       url("../fonts/vazir-font-v18.0.0/Vazir-Medium.ttf") format("truetype"); /* منبع فونت با فرمت truetype */
+  font-weight: normal; /* وزن فونت */
+  font-style: normal; /* سبک فونت */
+}
+
+/* تعریف عرض ستون‌ها برای سیستم شبکه‌ای */
+.col-1 {
+  width: 8.33%; /* عرض ستون اول */
+}
+
+.col-2 {
+  width: 16.66%; /* عرض ستون دوم */
+}
+
+.col-3 {
+  width: 25%; /* عرض ستون سوم */
+}
+
+.col-4 {
+  width: 33.33%; /* عرض ستون چهارم */
+}
+
+.col-5 {
+  width: 41.66%; /* عرض ستون پنجم */
+}
+
+.col-6 {
+  width: 50%; /* عرض ستون ششم */
+}
+
+.col-7 {
+  width: 58.33%; /* عرض ستون هفتم */
+}
+
+.col-8 {
+  width: 66.66%; /* عرض ستون هشتم */
+}
+
+.col-9 {
+  width: 75%; /* عرض ستون نهم */
+}
+
+.col-10 {
+  width: 83.33%; /* عرض ستون دهم */
+}
+
+.col-11 {
+  width: 91.66%; /* عرض ستون یازدهم */
+}
+
+.col-12 {
+  width: 100%; /* عرض ستون دوازدهم */
+}
+
+/* تنظیم رفتار اسکرول */
+html {
+  scroll-behavior: smooth; /* ایجاد اسکرول نرم */
+}
+
+/* استایل برای بدنه صفحه */
+body {
+  font-family: "Vazir", sans-serif; /* تعیین فونت برای بدنه */
+  margin: 0; /* حذف حاشیه */
+  padding: 0; /* حذف فاصله داخلی */
+  overflow-x: hidden; /* پنهان کردن اسکرول افقی */
+}
+
+/* استایل برای نوار اسکرول */
+::-webkit-scrollbar {
+  width: 8px; /* عرض نوار اسکرول */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* رنگ پس‌زمینه نوار اسکرول */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #789461; /* رنگ نوار اسکرول */
+  border-radius: 4px; /* گرد کردن گوشه‌های نوار اسکرول */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #50623A; /* تغییر رنگ نوار اسکرول در حالت hover */
+}
+
+/* استایل برای هدر */
+#header {
+  width: 100%; /* عرض 100% برای هدر */
+  text-align: center; /* تراز کردن متن به مرکز */
+  margin: auto; /* مرکز کردن هدر */
+  margin-bottom: 0; /* حذف فاصله پایین */
+  display: flex; /* استفاده از فلیکس باکس برای تراز کردن عناصر داخلی */
+  align-items: center; /* تراز کردن عناصر به مرکز عمودی */
+  padding: 10px 0px; /* فاصله داخلی از بالا و پایین */
+  position: fixed; /* ثابت نگه‌داشتن هدر در بالای صفحه */
+  z-index: 1; /* تعیین ترتیب نمایش */
+  background-color: rgb(252, 252, 252); /* رنگ پس‌زمینه هدر */
+  top: 0px; /* قرار دادن هدر در بالای صفحه */
+  box-shadow: 1px 4px 28px 0px rgba(73, 67, 67, 0.4); /* سایه برای هدر */
+  -webkit-box-shadow: 1px 4px 28px 0px rgba(73, 67, 67, 0.4); /* سایه برای مرورگرهای وب‌کیت */
+  -moz-box-shadow: 1px 4px 28px 0px rgba(73, 67, 67, 0.4); /* سایه برای مرورگرهای موزیلا */
+}
+
+
+/* استایل برای لوگو در هدر */
+#header .logo {
+  width: 100%; /* عرض 100% برای لوگو */
+}
+
+/* استایل برای لینک‌ها در هدر */
+#header a {
+  display: flex; /* استفاده از فلیکس باکس برای تراز کردن عناصر */
+  align-items: center; /* تراز کردن عناصر به مرکز عمودی */
+  justify-content: center; /* تراز کردن عناصر به مرکز افقی */
+}
+
+/* استایل برای تصویر لوگو در هدر */
+#header .logo img {
+  width: 70%; /* عرض 70% برای تصویر لوگو */
+  border-radius: 20px; /* گرد کردن گوشه‌های تصویر */
+}
+
+/* استایل برای فرم‌ها در هدر */
+#header .formss {
+  display: flex; /* استفاده از فلیکس باکس برای تراز کردن فرم‌ها */
+}
+
+/* استایل برای اطلاعات در هدر */
+#header .inform {
+  width: 100%; /* عرض 100% برای بخش اطلاعات */
+  margin: 1%; /* فاصله از سایر عناصر */
+}
+
+/* استایل برای فرم جستجو */
+.searchbar-form {
+  width: 100%; /* عرض 100% برای فرم جستجو */
+  position: relative; /* موقعیت نسبی برای قرارگیری دکمه */
+  display: flex; /* استفاده از فلیکس باکس برای تراز کردن عناصر */
+  align-items: center; /* تراز کردن عناصر به مرکز عمودی */
+}
+
+/* استایل برای ورودی فرم جستجو */
+.searchbar-form input {
+  width: 100%; /* عرض 100% برای ورودی */
+  border-radius: 20px; /* گرد کردن گوشه‌های ورودی */
+  padding: 12px 45px 12px 15px; /* فاصله داخلی */
+  margin: 5px; /* فاصله از سایر عناصر */
+  border: 1px solid rgba(61, 61, 61, 0.2); /* حاشیه برای ورودی */
+  font-size: 0.9em; /* اندازه فونت */
+  transition: all 0.3s ease; /* انیمیشن برای تغییرات */
+}
+
+/* استایل برای ورودی در حالت فوکوس */
+.searchbar-form input:focus {
+  outline: none; /* حذف حاشیه پیش‌فرض */
+  border-color: #789461; /* تغییر رنگ حاشیه */
+  box-shadow: 0 0 5px rgba(120, 148, 97, 0.3); /* سایه برای ورودی */
+}
+
+/* استایل برای دکمه در فرم جستجو */
+.searchbar-form button {
+  position: absolute; /* موقعیت مطلق برای قرارگیری دکمه */
+  right: 15px; /* فاصله از سمت راست */
+  background: none; /* حذف رنگ پس‌زمینه */
+  border: none; /* حذف حاشیه */
+  color: #789461; /* رنگ متن دکمه */
+  cursor: pointer; /* تغییر نشانگر ماوس به دست */
+  transition: all 0.3s ease; /* انیمیشن برای تغییرات */
+}
+
+/* استایل برای دکمه در حالت hover */
+.searchbar-form button:hover {
+  color: #50623A; /* تغییر رنگ متن دکمه */
+  transform: scale(1.1); /* بزرگ کردن دکمه */
+}
+
+/* استایل برای آیکون در دکمه */
+.searchbar-form i {
+  font-size: 1.1em; /* اندازه فونت آیکون */
+}
+
+/* استایل برای آیکون‌های سمت چپ */
+.searchbar-left-ic {
+  width: 100%; /* عرض 100% برای آیکون‌ها */
+  display: flex; /* استفاده از فلیکس باکس برای تراز کردن آیکون‌ها */
+  float: left; /* قرار دادن آیکون‌ها در سمت چپ */
+  justify-content: center; /* تراز کردن آیکون‌ها به مرکز افقی */
+}
+
+/* استایل برای آیکون 2 */
+.icon2 {
+  width: 25%; /* عرض 25% برای آیکون */
+  margin: 2px; /* فاصله از سایر عناصر */
+  padding: 15px 17px; /* فاصله داخلی */
+  justify-content: center; /* تراز کردن آیکون به مرکز */
+  background-color: rgb(165, 159, 159); /* رنگ پس‌زمینه آیکون */
+  border-radius: 10px; /* گرد کردن گوشه‌های آیکون */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* سایه برای آیکون */
+}
+
+/* استایل برای آیکون 3 */
+.icon3 {
+  width: 25%; /* عرض 25% برای آیکون */
+  margin: 2px; /* فاصله از سایر عناصر */
+  padding: 15px 17px; /* فاصله داخلی */
+  justify-content: center; /* تراز کردن آیکون به مرکز */
+  background-color: #789461; /* رنگ پس‌زمینه آیکون */
+  border-radius: 10px; /* گرد کردن گوشه‌های آیکون */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* سایه برای آیکون */
+}
+
+
+/* استایل برای آیکون‌ها در لینک‌ها */
+a .icon2,
+.icon3 {
+  color: white; /* تعیین رنگ متن آیکون‌ها به سفید */
+  text-align: center; /* تراز کردن متن به مرکز */
+}
+
+/* استایل برای متن سمت چپ جستجو */
+.searchbar-left-txt {
+  display: flex; /* استفاده از فلیکس باکس برای تراز کردن عناصر */
+  flex-direction: column; /* قرار دادن عناصر به صورت ستونی */
+  justify-content: center; /* تراز کردن عناصر به مرکز عمودی */
+  text-align: right; /* تراز کردن متن به سمت راست */
+}
+
+/* استایل برای متن اولین بخش سمت چپ جستجو */
+.searchbar-left-txt-1 {
+  font-size: 0.8rem; /* اندازه فونت برای متن */
+}
+
+/* استایل برای دکمه‌های جستجو */
+.search button {
+  background-color: white; /* رنگ پس‌زمینه دکمه به سفید */
+  border: none; /* حذف حاشیه دکمه */
+}
+
+/* استایل برای نوار کناری */
+#slidebar {
+  display: none; /* مخفی کردن نوار کناری به صورت پیش‌فرض */
+  position: absolute; /* موقعیت مطلق برای نوار کناری */
+  top: 0; /* قرار دادن نوار در بالای صفحه */
+  left: 0; /* قرار دادن نوار در سمت چپ */
+  width: 20%; /* عرض نوار کناری */
+  min-width: 250px; /* حداقل عرض نوار کناری */
+  height: 100%; /* ارتفاع 100% برای نوار کناری */
+  background-color: rgba(44, 47, 42, 0.85); /* رنگ پس‌زمینه با شفافیت */
+  backdrop-filter: blur(8px); /* ایجاد افکت بلور در پس‌زمینه */
+  z-index: 2; /* تعیین ترتیب نمایش نوار کناری */
+  margin: 2px; /* فاصله از سایر عناصر */
+  animation: slideIn 0.4s ease-in-out; /* انیمیشن ورود نوار کناری */
+}
+
+/* تعریف انیمیشن ورود نوار کناری */
+@keyframes slideIn {
+  0% {
+    left: -20%; /* موقعیت اولیه نوار کناری خارج از صفحه */
+    opacity: 0; /* شفافیت اولیه */
+  }
+  100% {
+    left: 0; /* موقعیت نوار کناری در صفحه */
+    opacity: 1; /* شفافیت نهایی */
+  }
+}
+
+/* نمایش نوار کناری هنگام هدف‌گذاری */
+#slidebar:target {
+  display: block; /* نمایش نوار کناری */
+  position: fixed; /* موقعیت ثابت برای نوار کناری */
+  animation: slideIn 0.4s ease-in-out; /* انیمیشن ورود نوار کناری */
+}
+
+/* استایل برای لینک‌ها در نوار کناری */
+#slidebar a {
+  text-decoration: none; /* حذف زیرخط از لینک‌ها */
+  color: #294b29; /* رنگ متن لینک‌ها */
+  padding-top: 2%; /* فاصله بالای لینک‌ها */
+}
+
+/* استایل برای آیکون‌ها در نوار کناری */
+#slidebar i {
+  margin: 5% 3%; /* فاصله از سایر عناصر */
+}
+
+/* استایل برای عنوان‌ها در نوار کناری */
+#slidebar h4 {
+  margin: 1%; /* فاصله از سایر عناصر */
+}
+
+/* استایل برای خط جداکننده در نوار کناری */
+#slidebar hr {
+  width: 90%; /* عرض خط جداکننده */
+  height: 2px; /* ارتفاع خط جداکننده */
+  background-color: #254b0691; /* رنگ خط جداکننده */
+  border: none; /* حذف حاشیه */
+}
+
+/* تغییر رنگ لینک‌ها در حالت hover در نوار کناری */
+#slidebar .head a:hover {
+  color: #6dc305; /* تغییر رنگ متن لینک‌ها در حالت hover */
+}
+
+/* استایل برای بخش هدر در نوار کناری */
+#slidebar .head {
+  display: flex; /* استفاده از فلیکس باکس برای تراز کردن عناصر */
+  justify-content: space-evenly; /* تراز کردن عناصر با فاصله مساوی */
+  margin-top: 40px; /* فاصله بالای بخش هدر */
+}
+
+/* استایل برای کانتینر محصولات */
+.products-container {
+  padding: 10px; /* فاصله داخلی از بالا و پایین */
+  margin: 10px; /* فاصله خارجی از سایر عناصر */
+  max-height: calc(100vh - 200px); /* حداکثر ارتفاع کانتینر */
+  overflow-y: auto; /* فعال کردن اسکرول عمودی در صورت نیاز */
+}
+
+/* استایل برای محصولات داخل نوار کناری */
+#slidebar #products div {
+  width: 60%; /* عرض هر محصول */
+  margin: 2% auto; /* فاصله عمودی و تراز به مرکز افقی */
+}
+
+/* استایل برای عنوان محصولات */
+#products .warm1 .title {
+  display: flex; /* استفاده از فلیکس باکس برای تراز کردن عناصر */
+  flex-direction: column; /* قرار دادن عناصر به صورت ستونی */
+}
+
+/* استایل برای زیرعنوان در عنوان محصولات */
+#products .warm1 .title p span {
+  font-size: .7rem; /* اندازه فونت برای زیرعنوان */
+}
+
+/* استایل برای حالت خالی */
+.empty {
+  text-align: center; /* تراز کردن متن به مرکز */
+  padding: 30px 15px; /* فاصله داخلی */
+  color: rgba(255, 255, 255, 0.8); /* رنگ متن با شفافیت */
+}
+
+/* استایل برای آیکون در حالت خالی */
+.empty i {
+  font-size: 3em; /* اندازه فونت آیکون */
+  margin-bottom: 10px; /* فاصله پایین آیکون */
+}
+
+/* استایل برای تصویر سطل زباله */
+#binPic {
+  position: relative; /* موقعیت نسبی برای قرارگیری */
+  top: 6rem; /* فاصله از بالای صفحه */
+  width: 100%; /* عرض 100% برای تصویر */
+}
+
+/* استایل برای بخش تصویر در سطل زباله */
+#binPic .image {
+  width: 90%; /* عرض 90% برای تصویر */
+  margin: 1% auto; /* فاصله عمودی و تراز به مرکز افقی */
+  overflow: hidden; /* مخفی کردن هر چیزی که از مرزها خارج می‌شود */
+  border-radius: 20px; /* گرد کردن گوشه‌های تصویر */
+}
+
+/* استایل برای تصویر داخل سطل زباله */
+#binPic .image img {
+  width: 100%; /* عرض 100% برای تصویر */
+  border-radius: 20px; /* گرد کردن گوشه‌های تصویر */
+  transition: transform 1s ease; /* انیمیشن برای تغییرات */
+}
+
+/* افکت بزرگ شدن تصویر در حالت hover */
+#binPic .image img:hover {
+  transform: scale(1.09); /* بزرگ کردن تصویر */
+}
+
+/* استایل برای عنوان دسته‌بندی */
+#category .title {
+  width: 50%; /* عرض 50% برای عنوان */
+  margin: 2% auto; /* فاصله عمودی و تراز به مرکز افقی */
+  text-align: center; /* تراز کردن متن به مرکز */
+}
+
+/* استایل برای خط جداکننده در عنوان دسته‌بندی */
+#category .title hr {
+  height: 1.4px; /* ارتفاع خط جداکننده */
+  background-color: #0a350a; /* رنگ خط جداکننده */
+  margin: 4% auto; /* فاصله عمودی و تراز به مرکز افقی */
+  width: 60%; /* عرض خط جداکننده */
+}
+
+/* استایل برای دسته‌بندی */
+#category {
+  position: relative; /* موقعیت نسبی برای قرارگیری */
+  top: 6rem; /* فاصله از بالای صفحه */
+  margin: 5% auto; /* فاصله عمودی و تراز به مرکز افقی */
+}
+
+/* استایل برای آیتم‌های دسته‌بندی */
+#category .items {
+  display: flex; /* استفاده از فلیکس باکس برای تراز کردن عناصر */
+  justify-content: space-evenly; /* تراز کردن عناصر با فاصله مساوی */
+}
+
+/* استایل برای اولین آیتم دسته‌بندی */
+#category .item1 {
+  background-color: #dbe7c9; /* رنگ پس‌زمینه برای آیتم */
+  border-radius: 20px; /* گرد کردن گوشه‌های آیتم */
+  transition: box-shadow 1s, transform 1s; /* انیمیشن برای سایه و تغییرات */
+}
+
+/* استایل برای لینک‌ها در آیتم دسته‌بندی */
+#category .item1 a {
+  text-decoration: none; /* حذف زیرخط از لینک‌ها */
+  color: #50623a; /* رنگ متن لینک‌ها */
+  text-align: center; /* تراز کردن متن به مرکز */
+}
+
+/* استایل برای متن در آیتم دسته‌بندی */
+#category .item1 p {
+  font-size: 0.8rem; /* اندازه فونت برای متن */
+  transition: transform 1s ease; /* انیمیشن برای تغییرات */
+}
+
+/* استایل برای آیکون در آیتم دسته‌بندی */
+#category .item1 i {
+  padding: 20px 40px; /* فاصله داخلی آیکون */
+  font-size: 3rem; /* اندازه فونت آیکون */
+  transition: transform 1s ease; /* انیمیشن برای تغییرات */
+}
+
+#category .item1 a:hover * { /* وقتی ماوس بر روی لینک‌های داخل item1 می‌رود */
+  transform: scale(1.09); /* اندازه عناصر را کمی بزرگ‌تر می‌کند */
+  font-weight: bold; /* متن را به حالت پررنگ تغییر می‌دهد */
+}
+
+#category .item1:hover { /* وقتی ماوس بر روی item1 می‌رود */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.181); /* سایه‌ای به item1 اضافه می‌کند */
+}
+
+#warm { /* استایل برای عنصر با id warm */
+  position: relative; /* موقعیت نسبی برای تنظیم موقعیت داخلی */
+  top: 6rem; /* فاصله از بالای صفحه */
+}
+
+#warm .Maintitle { /* استایل برای عنوان اصلی داخل warm */
+  width: 85%; /* عرض 85% از فضای موجود */
+  margin: auto; /* مرکز چینش افقی */
+  text-align: center; /* متن را در وسط قرار می‌دهد */
+}
+
+#warm .Maintitle hr { /* استایل برای خط افقی زیر عنوان */
+  height: 2px; /* ارتفاع خط */
+  background-color: #294b29; /* رنگ پس‌زمینه خط */
+  border: none; /* حذف حاشیه پیش‌فرض خط */
+  width: 20%; /* عرض خط */
+}
+
+.warm-items { /* استایل برای گروه اقلام گرم */
+  display: flex; /* استفاده از Flexbox برای چینش عناصر */
+  width: 95%; /* عرض 95% از فضای موجود */
+  margin: 2% auto 5%; /* فاصله بالا، پایین و مرکز چینش افقی */
+}
+
+.warm1 { /* استایل برای هر عنصر گرم */
+  width: 80%; /* عرض 80% از فضای موجود */
+  background-color: #50623A; /* رنگ پس‌زمینه */
+  border-radius: 10px; /* گرد کردن گوشه‌ها */
+  text-align: center; /* متن را در وسط قرار می‌دهد */
+  margin: auto; /* مرکز چینش افقی */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* انیمیشن برای تغییر اندازه و سایه */
+}
+
+.warm1:hover { /* وقتی ماوس بر روی warm1 می‌رود */
+  transform: translateY(-5px); /* عنصر را کمی به بالا حرکت می‌دهد */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* سایه‌ای برای عمق بیشتر */
+}
+
+.warm1 img { /* استایل برای تصاویر داخل warm1 */
+  width: 85%; /* عرض 85% از فضای موجود */
+  margin: 5% auto; /* فاصله بالا و پایین و مرکز چینش افقی */
+  border-radius: 10px; /* گرد کردن گوشه‌های تصویر */
+  transition: transform 0.3s ease; /* انیمیشن برای تغییر اندازه تصویر */
+}
+
+.warm1:hover img { /* وقتی ماوس بر روی warm1 می‌رود */
+  transform: scale(1.05); /* تصویر را کمی بزرگ‌تر می‌کند */
+}
+
+.warm1 .title { /* استایل برای عنوان داخل warm1 */
+  display: flex; /* استفاده از Flexbox برای چینش عناصر */
+  justify-content: space-evenly; /* فاصله مساوی بین عناصر */
+  font-size: .8rem; /* اندازه فونت */
+  margin-bottom: 3%; /* فاصله پایین */
+  padding-bottom: 5%; /* فاصله داخلی پایین */
+}
+
+.warm1 .title button { /* استایل برای دکمه‌های داخل عنوان */
+  background-color: #50623a; /* رنگ پس‌زمینه دکمه */
+  border: none; /* حذف حاشیه */
+  cursor: pointer; /* تغییر نشانگر ماوس به دست */
+  font-size: 1rem; /* اندازه فونت دکمه */
+  transition: .6s; /* انیمیشن برای تغییر اندازه */
+}
+
+.warm1 .title button:hover { /* وقتی ماوس بر روی دکمه می‌رود */
+  font-size: 1.1rem; /* اندازه فونت دکمه را بزرگ‌تر می‌کند */
+}
+
+.warm1 .title .name { /* استایل برای نام داخل عنوان */
+  font-weight: bold; /* متن را به حالت پررنگ تغییر می‌دهد */
+  font-size: .9rem; /* اندازه فونت */
+  display: flex; /* استفاده از Flexbox برای چینش */
+  align-items: center; /* مرکز چینش عمودی عناصر */
+}
+
+.warm1 .title * { /* استایل برای تمام عناصر داخل عنوان */
+  margin: 3%; /* فاصله از تمام طرف‌ها */
+}
+
+.warm1 span { /* استایل برای عنصر span داخل warm1 */
+  font-weight: bold; /* متن را به حالت پررنگ تغییر می‌دهد */
+  font-size: .9rem; /* اندازه فونت */
+}
+
+#cool { /* استایل برای عنصر با id cool */
+  position: relative; /* موقعیت نسبی برای تنظیم موقعیت داخلی */
+  top: 6rem; /* فاصله از بالای صفحه */
+}
+
+#cool .Maintitle { /* استایل برای عنوان اصلی داخل cool */
+  width: 85%; /* عرض 85% از فضای موجود */
+  margin: auto; /* مرکز چینش افقی */
+  text-align: center; /* متن را در وسط قرار می‌دهد */
+}
+
+#cool .Maintitle hr { /* استایل برای خط افقی زیر عنوان */
+  height: 2px; /* ارتفاع خط */
+  background-color: #294b29; /* رنگ پس‌زمینه خط */
+  border: none; /* حذف حاشیه پیش‌فرض خط */
+  width: 20%; /* عرض خط */
+}
+
+.cool-items { /* استایل برای گروه اقلام سرد */
+  display: flex; /* استفاده از Flexbox برای چینش عناصر */
+  width: 95%; /* عرض 95% از فضای موجود */
+  margin: 2% auto 5%; /* فاصله بالا، پایین و مرکز چینش افقی */
+}
+
+.cool1 { /* استایل برای هر عنصر سرد */
+  width: 80%; /* عرض 80% از فضای موجود */
+  background-color: #789461; /* رنگ پس‌زمینه */
+  border-radius: 10px; /* گرد کردن گوشه‌ها */
+  text-align: center; /* متن را در وسط قرار می‌دهد */
+  margin: auto; /* مرکز چینش افقی */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* انیمیشن برای تغییر اندازه و سایه */
+}
+
+.cool1:hover { /* وقتی ماوس بر روی cool1 می‌رود */
+  transform: translateY(-5px); /* عنصر را کمی به بالا حرکت می‌دهد */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* سایه‌ای برای عمق بیشتر */
+}
+
+.cool1 img { /* استایل برای تصاویر داخل cool1 */
+  width: 85%; /* عرض 85% از فضای موجود */
+  margin: 5% auto; /* فاصله بالا و پایین و مرکز چینش افقی */
+  border-radius: 10px; /* گرد کردن گوشه‌های تصویر */
+  transition: transform 0.3s ease; /* انیمیشن برای تغییر اندازه تصویر */
+}
+
+.cool1:hover img { /* وقتی ماوس بر روی cool1 می‌رود */
+  transform: scale(1.05); /* تصویر را کمی بزرگ‌تر می‌کند */
+}
+
+.cool1 .title { /* استایل برای عنوان داخل cool1 */
+  display: flex; /* استفاده از Flexbox برای چینش عناصر */
+  justify-content: space-evenly; /* فاصله مساوی بین عناصر */
+  font-size: .8rem; /* اندازه فونت */
+  margin-bottom: 3%; /* فاصله پایین */
+  padding-bottom: 5%; /* فاصله داخلی پایین */
+}
+
+.cool1 .title button { /* استایل برای دکمه‌های داخل عنوان */
+  background-color: #789461; /* رنگ پس‌زمینه دکمه */
+  border: none; /* حذف حاشیه */
+  cursor: pointer; /* تغییر نشانگر ماوس به دست */
+  font-size: 1rem; /* اندازه فونت دکمه */
+  transition: .6s; /* انیمیشن برای تغییر اندازه */
+}
+
+.cool1 .title button:hover { /* وقتی ماوس بر روی دکمه می‌رود */
+  font-size: 1.1rem; /* اندازه فونت دکمه را بزرگ‌تر می‌کند */
+}
+
+.cool1 .title .name { /* استایل برای نام داخل عنوان */
+  font-weight: bold; /* متن را به حالت پررنگ تغییر می‌دهد */
+  font-size: .9rem; /* اندازه فونت */
+  display: flex; /* استفاده از Flexbox برای چینش */
+  align-items: center; /* مرکز چینش عمودی عناصر */
+}
+
+.cool1 .title * { /* استایل برای تمام عناصر داخل عنوان */
+  margin: 3%; /* فاصله از تمام طرف‌ها */
+}
+
+.cool1 span { /* استایل برای عنصر span داخل cool1 */
+  font-weight: bold; /* متن را به حالت پررنگ تغییر می‌دهد */
+  font-size: .9rem; /* اندازه فونت */
+}
+
+#ice { /* استایل برای عنصر با id ice */
+  position: relative; /* موقعیت نسبی برای تنظیم موقعیت داخلی */
+  top: 6rem; /* فاصله از بالای صفحه */
+}
+
+#ice .Maintitle { /* استایل برای عنوان اصلی داخل ice */
+  width: 85%; /* عرض 85% از فضای موجود */
+  margin: auto; /* مرکز چینش افقی */
+  text-align: center; /* متن را در وسط قرار می‌دهد */
+}
+
+#ice .Maintitle hr { /* استایل برای خط افقی زیر عنوان */
+  height: 2px; /* ارتفاع خط */
+  background-color: #294b29; /* رنگ پس‌زمینه خط */
+  border: none; /* حذف حاشیه پیش‌فرض خط */
+  width: 20%; /* عرض خط */
+}
+
+.ice-items { /* استایل برای گروه اقلام یخ */
+  display: flex; /* استفاده از Flexbox برای چینش عناصر */
+  width: 95%; /* عرض 95% از فضای موجود */
+  margin: 2% auto 5%; /* فاصله بالا، پایین و مرکز چینش افقی */
+}
+
+.ice1 { /* استایل برای عنصر با کلاس ice1 */
+  width: 80%; /* عرض 80% از فضای موجود */
+  background-color: #DBE7C9; /* رنگ پس‌زمینه */
+  border-radius: 10px; /* گرد کردن گوشه‌ها */
+  text-align: center; /* متن را در وسط قرار می‌دهد */
+  margin: auto; /* مرکز چینش افقی */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* انیمیشن برای تغییر اندازه و سایه */
+}
+
+.ice1:hover { /* وقتی ماوس بر روی ice1 می‌رود */
+  transform: translateY(-5px); /* عنصر را کمی به بالا حرکت می‌دهد */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* سایه‌ای برای عمق بیشتر */
+}
+
+.ice1 img { /* استایل برای تصاویر داخل ice1 */
+  width: 85%; /* عرض 85% از فضای موجود */
+  margin: 5% auto; /* فاصله بالا و پایین و مرکز چینش افقی */
+  border-radius: 10px; /* گرد کردن گوشه‌های تصویر */
+  transition: transform 0.3s ease; /* انیمیشن برای تغییر اندازه تصویر */
+}
+
+.ice1:hover img { /* وقتی ماوس بر روی ice1 می‌رود */
+  transform: scale(1.05); /* تصویر را کمی بزرگ‌تر می‌کند */
+}
+
+.ice1 .title { /* استایل برای عنوان داخل ice1 */
+  display: flex; /* استفاده از Flexbox برای چینش عناصر */
+  justify-content: space-evenly; /* فاصله مساوی بین عناصر */
+  font-size: .8rem; /* اندازه فونت */
+  margin-bottom: 3%; /* فاصله پایین */
+  padding-bottom: 5%; /* فاصله داخلی پایین */
+}
+
+.ice1 .title button { /* استایل برای دکمه‌های داخل عنوان */
+  background-color: #DBE7C9; /* رنگ پس‌زمینه دکمه */
+  border: none; /* حذف حاشیه */
+  cursor: pointer; /* تغییر نشانگر ماوس به دست */
+  font-size: 1rem; /* اندازه فونت دکمه */
+  transition: .6s; /* انیمیشن برای تغییر اندازه */
+}
+
+.ice1 .title button:hover { /* وقتی ماوس بر روی دکمه می‌رود */
+  font-size: 1.1rem; /* اندازه فونت دکمه را بزرگ‌تر می‌کند */
+}
+
+.ice1 .title .name { /* استایل برای نام داخل عنوان */
+  font-weight: bold; /* متن را به حالت پررنگ تغییر می‌دهد */
+  font-size: .9rem; /* اندازه فونت */
+  display: flex; /* استفاده از Flexbox برای چینش */
+  align-items: center; /* مرکز چینش عمودی عناصر */
+}
+
+.ice1 .title * { /* استایل برای تمام عناصر داخل عنوان */
+  margin: 3%; /* فاصله از تمام طرف‌ها */
+}
+
+.ice1 span { /* استایل برای عنصر span داخل ice1 */
+  font-weight: bold; /* متن را به حالت پررنگ تغییر می‌دهد */
+  font-size: .9rem; /* اندازه فونت */
+}
+
+#sandwich { /* استایل برای عنصر با id sandwich */
+  position: relative; /* موقعیت نسبی برای تنظیم موقعیت داخلی */
+  top: 6rem; /* فاصله از بالای صفحه */
+}
+
+#sandwich .Maintitle { /* استایل برای عنوان اصلی داخل sandwich */
+  width: 85%; /* عرض 85% از فضای موجود */
+  margin: auto; /* مرکز چینش افقی */
+  text-align: center; /* متن را در وسط قرار می‌دهد */
+}
+
+#sandwich .Maintitle hr { /* استایل برای خط افقی زیر عنوان */
+  height: 2px; /* ارتفاع خط */
+  background-color: #294b29; /* رنگ پس‌زمینه خط */
+  border: none; /* حذف حاشیه پیش‌فرض خط */
+  width: 20%; /* عرض خط */
+}
+
+.sandwich-items { /* استایل برای گروه اقلام ساندویچ */
+  display: flex; /* استفاده از Flexbox برای چینش عناصر */
+  width: 95%; /* عرض 95% از فضای موجود */
+  margin: 2% auto 5%; /* فاصله بالا، پایین و مرکز چینش افقی */
+}
+
+.sandwich1 { /* استایل برای هر عنصر ساندویچ */
+  width: 80%; /* عرض 80% از فضای موجود */
+  background-color: #DBE7C9; /* رنگ پس‌زمینه */
+  border-radius: 10px; /* گرد کردن گوشه‌ها */
+  text-align: center; /* متن را در وسط قرار می‌دهد */
+  margin: auto; /* مرکز چینش افقی */
+  overflow: hidden; /* جلوگیری از نمایش محتوای اضافی */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* انیمیشن برای تغییر اندازه و سایه */
+}
+
+.sandwich1:hover { /* وقتی ماوس بر روی sandwich1 می‌رود */
+  transform: translateY(-5px); /* عنصر را کمی به بالا حرکت می‌دهد */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* سایه‌ای برای عمق بیشتر */
+}
+
+.sandwich1 img { /* استایل برای تصاویر داخل sandwich1 */
+  width: 85%; /* عرض 85% از فضای موجود */
+  height: 200px; /* ارتفاع تصویر */
+  margin: 5% auto; /* فاصله بالا و پایین و مرکز چینش افقی */
+  border-radius: 10px; /* گرد کردن گوشه‌های تصویر */
+  object-fit: cover; /* پوشش تصویر در فضای مشخص */
+  object-position: center; /* مرکز چینش تصویر */
+  display: block; /* نمایش به صورت بلاک */
+  transition: transform 0.3s ease; /* انیمیشن برای تغییر اندازه تصویر */
+}
+
+.sandwich1:hover img { /* وقتی ماوس بر روی sandwich1 می‌رود */
+  transform: scale(1.05); /* تصویر را کمی بزرگ‌تر می‌کند */
+}
+
+.sandwich1 .title { /* استایل برای عنوان داخل sandwich1 */
+  display: flex; /* استفاده از Flexbox برای چینش عناصر */
+  justify-content: space-evenly; /* فاصله مساوی بین عناصر */
+  font-size: .8rem; /* اندازه فونت */
+  margin-bottom: 3%; /* فاصله پایین */
+  padding-bottom: 5%; /* فاصله داخلی پایین */
+}
+
+
+
+.sandwich1 .title button { /* استایل برای دکمه‌های عنوان در ساندویچ */
+  background-color: #DBE7C9; /* رنگ پس‌زمینه دکمه */
+  border: none; /* حذف حاشیه */
+  cursor: pointer; /* تغییر نشانگر ماوس به دست */
+  font-size: 1rem; /* اندازه فونت دکمه */
+  transition: .6s; /* انیمیشن برای تغییر اندازه */
+}
+
+.sandwich1 .title button:hover { /* وقتی ماوس بر روی دکمه می‌رود */
+  font-size: 1.1rem; /* اندازه فونت دکمه را بزرگ‌تر می‌کند */
+}
+
+.sandwich1 .title .name { /* استایل برای نام در عنوان */
+  font-weight: bold; /* متن را به حالت پررنگ تغییر می‌دهد */
+  font-size: .9rem; /* اندازه فونت */
+  display: flex; /* استفاده از Flexbox برای چینش عناصر */
+  align-items: center; /* مرکز چینش عمودی عناصر */
+}
+
+.sandwich1 .title * { /* استایل برای تمام عناصر داخل عنوان */
+  margin: 3%; /* فاصله از تمام طرف‌ها */
+}
+
+.sandwich1 span { /* استایل برای عنصر span داخل ساندویچ */
+  font-weight: bold; /* متن را به حالت پررنگ تغییر می‌دهد */
+  font-size: .9rem; /* اندازه فونت */
+}
+
+#cake { /* استایل برای عنصر با id cake */
+  position: relative; /* موقعیت نسبی برای تنظیم موقعیت داخلی */
+  top: 6rem; /* فاصله از بالای صفحه */
+}
+
+#cake .Maintitle { /* استایل برای عنوان اصلی داخل cake */
+  width: 85%; /* عرض 85% از فضای موجود */
+  margin: auto; /* مرکز چینش افقی */
+  text-align: center; /* متن را در وسط قرار می‌دهد */
+}
+
+#cake .Maintitle hr { /* استایل برای خط افقی زیر عنوان */
+  height: 2px; /* ارتفاع خط */
+  background-color: #294b29; /* رنگ پس‌زمینه خط */
+  border: none; /* حذف حاشیه پیش‌فرض خط */
+  width: 20%; /* عرض خط */
+}
+
+.cake-items { /* استایل برای گروه اقلام کیک */
+  display: flex; /* استفاده از Flexbox برای چینش عناصر */
+  width: 95%; /* عرض 95% از فضای موجود */
+  margin: 2% auto 5%; /* فاصله بالا، پایین و مرکز چینش افقی */
+}
+
+.cake1 { /* استایل برای هر عنصر کیک */
+  width: 80%; /* عرض 80% از فضای موجود */
+  background-color: #DBE7C9; /* رنگ پس‌زمینه */
+  border-radius: 10px; /* گرد کردن گوشه‌ها */
+  text-align: center; /* متن را در وسط قرار می‌دهد */
+  margin: auto; /* مرکز چینش افقی */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* انیمیشن برای تغییر اندازه و سایه */
+}
+
+.cake1:hover { /* وقتی ماوس بر روی cake1 می‌رود */
+  transform: translateY(-5px); /* عنصر را کمی به بالا حرکت می‌دهد */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* سایه‌ای برای عمق بیشتر */
+}
+
+.cake1 img { /* استایل برای تصاویر داخل cake1 */
+  width: 85%; /* عرض 85% از فضای موجود */
+  margin: 5% auto; /* فاصله بالا و پایین و مرکز چینش افقی */
+  border-radius: 10px; /* گرد کردن گوشه‌های تصویر */
+  transition: transform 0.3s ease; /* انیمیشن برای تغییر اندازه تصویر */
+}
+
+.cake1:hover img { /* وقتی ماوس بر روی cake1 می‌رود */
+  transform: scale(1.05); /* تصویر را کمی بزرگ‌تر می‌کند */
+}
+
+.cake1 .title { /* استایل برای عنوان داخل cake1 */
+  display: flex; /* استفاده از Flexbox برای چینش عناصر */
+  justify-content: space-evenly; /* فاصله مساوی بین عناصر */
+  font-size: .8rem; /* اندازه فونت */
+  margin-bottom: 3%; /* فاصله پایین */
+  padding-bottom: 5%; /* فاصله داخلی پایین */
+}
+
+.cake1 .title button { /* استایل برای دکمه‌های عنوان در cake1 */
+  background-color: #DBE7C9; /* رنگ پس‌زمینه دکمه */
+  border: none; /* حذف حاشیه */
+  cursor: pointer; /* تغییر نشانگر ماوس به دست */
+  font-size: 1rem; /* اندازه فونت دکمه */
+  transition: .6s; /* انیمیشن برای تغییر اندازه */
+}
+
+.cake1 .title button:hover { /* وقتی ماوس بر روی دکمه می‌رود */
+  font-size: 1.1rem; /* اندازه فونت دکمه را بزرگ‌تر می‌کند */
+}
+
+.cake1 .title .name { /* استایل برای نام در عنوان cake1 */
+  font-weight: bold; /* متن را به حالت پررنگ تغییر می‌دهد */
+  font-size: .9rem; /* اندازه فونت */
+  display: flex; /* استفاده از Flexbox برای چینش عناصر */
+  align-items: center; /* مرکز چینش عمودی عناصر */
+}
+
+.cake1 .title * { /* استایل برای تمام عناصر داخل عنوان */
+  margin: 3%; /* فاصله از تمام طرف‌ها */
+}
+
+.cake1 span { /* استایل برای عنصر span داخل cake1 */
+  font-weight: bold; /* متن را به حالت پررنگ تغییر می‌دهد */
+  font-size: .9rem; /* اندازه فونت */
+}
+
+.remove-button { /* استایل برای دکمه حذف */
+  cursor: pointer; /* تغییر نشانگر ماوس به دست */
+  border-radius: 100%; /* گرد کردن دکمه به شکل دایره */
+  border: none; /* حذف حاشیه */
+  padding: 2% 4%; /* فاصله داخلی */
+  margin: 2%; /* فاصله خارجی */
+  color: #dbe7c9; /* رنگ متن دکمه */
+  background-color: #0a350a; /* رنگ پس‌زمینه دکمه */
+}
+
+
+.cart-item { /* استایل برای هر آیتم در سبد خرید */
+  display: flex; /* استفاده از Flexbox برای چینش افقی */
+  align-items: center; /* مرکز چینش عمودی عناصر */
+  justify-content: center; /* مرکز چینش افقی عناصر */
+  padding: 12px; /* فاصله داخلی */
+  margin: 8px 0; /* فاصله بالا و پایین */
+  background-color: rgba(255, 255, 255, 0.8); /* رنگ پس‌زمینه با شفافیت */
+  border-radius: 8px; /* گرد کردن گوشه‌ها */
+  position: relative; /* موقعیت نسبی برای تنظیم موقعیت دکمه حذف */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* انیمیشن برای تغییر اندازه و سایه */
+}
+
+.cart-item:hover { /* وقتی ماوس بر روی آیتم می‌رود */
+  transform: translateY(-2px); /* کمی آیتم را به بالا حرکت می‌دهد */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* سایه‌ای برای عمق بیشتر */
+  background-color: rgba(255, 255, 255, 0.9); /* تغییر رنگ پس‌زمینه */
+}
+
+.cart-item-image { /* استایل برای تصویر آیتم */
+  width: 70px; /* عرض تصویر */
+  height: 70px; /* ارتفاع تصویر */
+  margin-left: 12px; /* فاصله سمت چپ */
+  overflow: hidden; /* مخفی کردن قسمت‌های اضافی تصویر */
+}
+
+.cart-item-image img { /* استایل برای تصویر داخل cart-item-image */
+  width: 100%; /* عرض 100% از فضای موجود */
+  height: 100%; /* ارتفاع 100% از فضای موجود */
+  object-fit: cover; /* حفظ نسبت تصویر و پوشش کامل */
+  border-radius: 6px; /* گرد کردن گوشه‌های تصویر */
+  display: block; /* نمایش به صورت بلاک */
+}
+
+.cart-item-details { /* استایل برای جزئیات آیتم */
+  flex: 1; /* اجازه رشد به عنصر */
+  display: flex; /* استفاده از Flexbox برای چینش عمودی */
+  flex-direction: column; /* چینش عمودی عناصر */
+  align-items: center; /* مرکز چینش افقی عناصر */
+  justify-content: center; /* مرکز چینش عمودی عناصر */
+  text-align: center; /* مرکز چینش متن */
+  padding-bottom: 20px; /* فاصله داخلی پایین */
+}
+
+.cart-item-details .name { /* استایل برای نام آیتم */
+  font-size: 0.9em; /* اندازه فونت */
+  color: #294b29; /* رنگ متن */
+  margin-bottom: 4px; /* فاصله پایین */
+  width: 100%; /* عرض 100% */
+}
+
+.cart-item-details .price { /* استایل برای قیمت آیتم */
+  color: #50623A; /* رنگ متن */
+  font-size: 0.8em; /* اندازه فونت */
+  margin-bottom: 8px; /* فاصله پایین */
+  width: 100%; /* عرض 100% */
+}
+
+.quantity-controls { /* استایل برای کنترل‌های مقدار */
+  display: flex; /* استفاده از Flexbox برای چینش افقی */
+  align-items: center; /* مرکز چینش عمودی عناصر */
+  justify-content: center; /* مرکز چینش افقی عناصر */
+  gap: 8px; /* فاصله بین عناصر */
+  margin-bottom: 5px; /* فاصله پایین */
+}
+
+.quantity-btn { /* استایل برای دکمه‌های کنترل مقدار */
+  background: #789461; /* رنگ پس‌زمینه */
+  color: white; /* رنگ متن */
+  border: none; /* حذف حاشیه */
+  width: 24px; /* عرض دکمه */
+  height: 24px; /* ارتفاع دکمه */
+  border-radius: 50%; /* گرد کردن دکمه به شکل دایره */
+  cursor: pointer; /* تغییر نشانگر ماوس به دست */
+  display: flex; /* استفاده از Flexbox برای مرکز چینش محتوا */
+  align-items: center; /* مرکز چینش عمودی */
+  justify-content: center; /* مرکز چینش افقی */
+  transition: all 0.2s ease; /* انیمیشن برای تغییرات */
+}
+
+.quantity-btn:hover { /* وقتی ماوس بر روی دکمه می‌رود */
+  background: #50623A; /* تغییر رنگ پس‌زمینه */
+  transform: scale(1.1); /* بزرگ‌تر کردن دکمه */
+}
+
+.quantity { /* استایل برای نمایش مقدار */
+  font-size: 0.9em; /* اندازه فونت */
+  margin: 0 8px; /* فاصله چپ و راست */
+  color: #294b29; /* رنگ متن */
+  min-width: 15px; /* حداقل عرض */
+  text-align: center; /* مرکز چینش متن */
+}
+
+.remove-btn { /* استایل برای دکمه حذف */
+  position: absolute; /* موقعیت مطلق برای قرارگیری در گوشه */
+  left: 8px; /* فاصله از سمت چپ */
+  bottom: 8px; /* فاصله از پایین */
+  transform: none; /* عدم تغییر موقعیت */
+  background: none; /* حذف رنگ پس‌زمینه */
+  border: none; /* حذف حاشیه */
+  color: #ff4444; /* رنگ متن */
+  cursor: pointer; /* تغییر نشانگر ماوس به دست */
+  padding: 4px; /* فاصله داخلی */
+  transition: all 0.2s ease; /* انیمیشن برای تغییرات */
+  font-size: 0.9em; /* اندازه فونت */
+}
+
+.remove-btn i { /* استایل برای آیکون داخل دکمه حذف */
+  font-size: 0.9em; /* اندازه فونت */
+}
+
+.remove-btn:hover { /* وقتی ماوس بر روی دکمه حذف می‌رود */
+  color: #cc0000; /* تغییر رنگ متن */
+  transform: scale(1.2); /* بزرگ‌تر کردن دکمه */
+}
+
+.cart-total { /* استایل برای مجموع سبد خرید */
+  margin: 15px 10px; /* فاصله بالا، پایین و چپ و راست */
+  padding: 15px; /* فاصله داخلی */
+  background-color: rgba(255, 255, 255, 0.8); /* رنگ پس‌زمینه با شفافیت */
+  border-radius: 8px; /* گرد کردن گوشه‌ها */
+  text-align: center; /* مرکز چینش متن */
+}
+
+.total-row { /* استایل برای ردیف مجموع */
+  display: flex; /* استفاده از Flexbox برای چینش افقی */
+  justify-content: space-between; /* فاصله مساوی بین عناصر */
+  align-items: center; /* مرکز چینش عمودی عناصر */
+  font-size: 1em; /* اندازه فونت */
+  color: #294b29; /* رنگ متن */
+  margin-bottom: 12px; /* فاصله پایین */
+  padding: 0 10px; /* فاصله داخلی چپ و راست */
+}
+
+.checkout-btn { /* استایل برای دکمه پرداخت */
+  width: 90%; /* عرض 90% از فضای موجود */
+  padding: 10px; /* فاصله داخلی */
+  background: #789461; /* رنگ پس‌زمینه */
+  color: white; /* رنگ متن */
+  border: none; /* حذف حاشیه */
+  border-radius: 20px; /* گرد کردن گوشه‌ها */
+  cursor: pointer; /* تغییر نشانگر ماوس به دست */
+  font-size: 0.9em; /* اندازه فونت */
+  transition: all 0.3s ease; /* انیمیشن برای تغییرات */
+  margin: 0 auto; /* مرکز چینش افقی */
+}
+
+.checkout-btn:hover { /* وقتی ماوس بر روی دکمه پرداخت می‌رود */
+  background: #50623A; /* تغییر رنگ پس‌زمینه */
+  transform: translateY(-2px); /* کمی دکمه را به بالا حرکت می‌دهد */
+}
+
+.empty { /* استایل برای حالت خالی (مثلاً وقتی سبد خرید خالی است) */
+  text-align: center; /* مرکز چینش متن */
+  padding: 30px 15px; /* فاصله داخلی */
+  color: rgba(255, 255, 255, 0.8); /* رنگ متن با شفافیت */
+}
+
+.empty i { /* استایل برای آیکون داخل حالت خالی */
+  font-size: 3em; /* اندازه بزرگ آیکون */
+  margin-bottom: 10px; /* فاصله پایین */
+}
+
+.products-container::-webkit-scrollbar { /* استایل برای نوار اسکرول */
+  width: 6px; /* عرض نوار اسکرول */
+}
+
+.products-container::-webkit-scrollbar-track { /* استایل برای پس‌زمینه نوار اسکرول */
+  background: rgba(255, 255, 255, 0.1); /* رنگ پس‌زمینه نوار */
+}
+
+.products-container::-webkit-scrollbar-thumb { /* استایل برای بخش قابل جابجایی نوار اسکرول */
+  background: rgba(120, 148, 97, 0.6); /* رنگ بخش قابل جابجایی */
+  border-radius: 3px; /* گرد کردن گوشه‌های نوار */
+}
+
+.products-container::-webkit-scrollbar-thumb:hover { /* استایل برای بخش قابل جابجایی هنگام هاور */
+  background: rgba(80, 98, 58, 0.8); /* تغییر رنگ هنگام هاور */
+}
+
+.footer { /* استایل برای فوتر */
+  background-color: #294b29; /* رنگ پس‌زمینه */
+  color: #fff; /* رنگ متن */
+  padding: 40px 0 0 0; /* فاصله داخلی */
+  margin-top: 8rem; /* فاصله بالا */
+  position: relative; /* موقعیت نسبی برای عناصر داخل */
+}
+
+.footer-content { /* استایل برای محتوای فوتر */
+  display: flex; /* استفاده از Flexbox برای چینش افقی */
+  justify-content: space-around; /* فاصله مساوی بین عناصر */
+  flex-wrap: wrap; /* اجازه به عناصر برای شکستن به خط بعدی */
+  max-width: 1200px; /* حداکثر عرض */
+  margin: 0 auto; /* مرکز چینش افقی */
+  padding: 0 20px; /* فاصله داخلی چپ و راست */
+}
+
+.footer-section { /* استایل برای هر بخش در فوتر */
+  flex: 1; /* اجازه رشد به عنصر */
+  min-width: 250px; /* حداقل عرض */
+  margin: 20px; /* فاصله اطراف */
+}
+
+.footer-section h4 { /* استایل برای عنوان هر بخش */
+  color: #DBE7C9; /* رنگ متن */
+  font-size: 1.2em; /* اندازه فونت */
+  margin-bottom: 20px; /* فاصله پایین */
+  position: relative; /* موقعیت نسبی برای عناصر داخلی */
+  padding-bottom: 10px; /* فاصله داخلی پایین */
+}
+
+.footer-section h4::after { /* ایجاد خط زیر عنوان */
+  content: ''; /* محتوا خالی برای ایجاد خط */
+  position: absolute; /* موقعیت مطلق */
+  bottom: 0; /* قرارگیری در پایین عنوان */
+  right: 0; /* قرارگیری در سمت راست */
+  width: 50px; /* عرض خط */
+  height: 2px; /* ارتفاع خط */
+  background-color: #789461; /* رنگ خط */
+}
+
+.footer-section p { /* استایل برای پاراگراف‌ها در فوتر */
+  line-height: 1.6; /* فاصله بین خطوط */
+  color: #f5f5f5; /* رنگ متن */
+  font-size: 0.9em; /* اندازه فونت */
+}
+
+.footer-section ul { /* استایل برای لیست‌ها در فوتر */
+  list-style: none; /* حذف نشانه‌های لیست */
+  padding: 0; /* حذف فاصله داخلی */
+}
+
+.footer-section ul li { /* استایل برای هر آیتم در لیست */
+  margin-bottom: 12px; /* فاصله پایین */
+  color: #f5f5f5; /* رنگ متن */
+  font-size: 0.9em; /* اندازه فونت */
+  display: flex; /* استفاده از Flexbox برای چینش افقی */
+  align-items: center; /* مرکز چینش عمودی عناصر */
+}
+
+.footer-section ul li i { /* استایل برای آیکون‌های داخل لیست */
+  margin-left: 10px; /* فاصله سمت چپ */
+  color: #789461; /* رنگ آیکون */
+}
+
+.social-links { /* استایل برای لینک‌های اجتماعی */
+  display: flex; /* استفاده از Flexbox برای چینش افقی */
+  gap: 15px; /* فاصله بین لینک‌ها */
+  margin-top: 20px; /* فاصله بالای لینک‌ها */
+}
+
+.social-link { /* استایل برای هر لینک اجتماعی */
+  display: flex; /* استفاده از Flexbox برای مرکز چینش محتوا */
+  align-items: center; /* مرکز چینش عمودی عناصر */
+  justify-content: center; /* مرکز چینش افقی عناصر */
+  width: 40px; /* عرض دایره */
+  height: 40px; /* ارتفاع دایره */
+  background-color: #789461; /* رنگ پس‌زمینه */
+  color: white; /* رنگ متن */
+  border-radius: 50%; /* گرد کردن دایره */
+  text-decoration: none; /* حذف زیرخط */
+  transition: all 0.3s ease; /* انیمیشن برای تغییرات */
+}
+
+
+.social-link:hover { /* استایل برای لینک اجتماعی هنگام هاور */
+  background-color: #50623A; /* تغییر رنگ پس‌زمینه */
+  transform: translateY(-3px); /* جابجایی لینک به سمت بالا */
+}
+
+.social-link i { /* استایل برای آیکون داخل لینک اجتماعی */
+  font-size: 1.2em; /* اندازه آیکون */
+}
+
+.footer-bottom { /* استایل برای بخش پایینی فوتر */
+  text-align: center; /* مرکز چینش متن */
+  padding: 20px; /* فاصله داخلی */
+  background-color: #1a331a; /* رنگ پس‌زمینه */
+  margin-top: 40px; /* فاصله بالا */
+}
+
+.footer-bottom p { /* استایل برای پاراگراف‌ها در بخش پایینی فوتر */
+  margin: 0; /* حذف فاصله اطراف */
+  font-size: 0.9em; /* اندازه فونت */
+  color: #DBE7C9; /* رنگ متن */
+}
+
+main { /* استایل برای بخش اصلی */
+  margin-bottom: 60px; /* فاصله پایین */
+}
+
+.footer-section a { /* استایل برای لینک‌ها در فوتر */
+  color: #f5f5f5; /* رنگ متن لینک */
+  text-decoration: none; /* حذف زیرخط */
+  transition: color 0.3s ease; /* انیمیشن برای تغییر رنگ */
+}
+
+.footer-section a:hover { /* استایل برای لینک‌ها در فوتر هنگام هاور */
+  color: #789461; /* تغییر رنگ متن لینک */
+}
+
+@media (max-width: 768px) { /* تنظیمات برای نمایش در صفحه‌های کوچک‌تر از 768 پیکسل */
+  
+  .searchbar-form input { /* استایل برای فیلد ورودی فرم جستجو */
+      padding: 10px 40px 10px 10px; /* فاصله داخلی: بالا، راست، پایین، چپ */
+      font-size: 0.8em; /* اندازه فونت */
+  }
+  
+  .searchbar-form button { /* استایل برای دکمه فرم جستجو */
+      right: 12px; /* موقعیت دکمه از سمت راست */
+  }
+  
+  .footer-section { /* استایل برای بخش‌های فوتر */
+      min-width: 200px; /* حداقل عرض */
+      margin: 10px; /* فاصله اطراف */
+  }
+  
+  .footer-content { /* استایل برای محتوای فوتر */
+      flex-direction: column; /* چینش عمودی عناصر */
+      align-items: center; /* تراز کردن عناصر به مرکز */
+      text-align: center; /* مرکز چینش متن */
+  }
+  
+  .footer-section h4::after { /* استایل برای عنصر بعد از عنوان h4 در فوتر */
+      right: 50%; /* موقعیت از سمت راست */
+      transform: translateX(50%); /* جابجایی به سمت راست برای مرکز چینش */
+  }
+  
+  .footer-section ul li { /* استایل برای آیتم‌های لیست در فوتر */
+      justify-content: center; /* مرکز چینش آیتم‌ها */
+  }
+  
+  .social-links { /* استایل برای لینک‌های اجتماعی */
+      justify-content: center; /* مرکز چینش لینک‌ها */
+  }
+}
+
+@media screen and (max-width: 1024px) { /* تنظیمات برای نمایش در صفحه‌های کوچک‌تر از 1024 پیکسل */
+  
+  #header .logo img { /* استایل برای تصویر لوگو در هدر */
+      width: 80%; /* تنظیم عرض تصویر لوگو به 80% */
+  }
+
+  .searchbar-form input { /* استایل برای فیلد ورودی فرم جستجو */
+      width: 75%; /* تنظیم عرض فیلد ورودی به 75% */
+  }
+
+  .col-3 { /* استایل برای ستون‌های با کلاس col-3 */
+      width: 33.33%; /* تنظیم عرض هر ستون به 33.33% */
+  }
+
+  .warm1, .cool1, .ice1, .sandwich1, .cake1 { /* استایل برای چند کلاس مختلف */
+      width: 90%; /* تنظیم عرض برای هر یک از این کلاس‌ها به 90% */
+  }
+}
+
+@media screen and (max-width: 768px) { /* تنظیمات برای نمایش در صفحه‌های کوچک‌تر از 768 پیکسل */
+  
+  #header { /* استایل برای هدر */
+      padding: 5px 0; /* فاصله داخلی: بالا و پایین */
+  }
+
+  #header .logo img { /* استایل برای تصویر لوگو در هدر */
+      width: 90%; /* تنظیم عرض تصویر لوگو به 90% */
+  }
+
+  .searchbar-form input { /* استایل برای فیلد ورودی فرم جستجو */
+      width: 70%; /* تنظیم عرض فیلد ورودی به 70% */
+      font-size: 0.9em; /* اندازه فونت */
+  }
+
+  .icon2, .icon3 { /* استایل برای آیکون‌های با کلاس icon2 و icon3 */
+      width: 35%; /* تنظیم عرض به 35% */
+      padding: 12px 14px; /* فاصله داخلی: بالا و پایین، چپ و راست */
+  }
+
+  #category .items { /* استایل برای آیتم‌های دسته‌بندی */
+      flex-wrap: wrap; /* اجازه به عناصر برای پیچیدن به خط بعدی */
+      gap: 10px; /* فاصله بین آیتم‌ها */
+  }
+
+  #category .item1 { /* استایل برای آیتم با کلاس item1 */
+      width: 45%; /* تنظیم عرض به 45% */
+      margin: 5px; /* فاصله اطراف */
+  }
+
+  #category .item1 i { /* استایل برای آیکون داخل item1 */
+      padding: 15px 30px; /* فاصله داخلی: بالا و پایین، چپ و راست */
+      font-size: 2.5rem; /* اندازه فونت */
+  }
+
+  .col-3 { /* استایل برای ستون‌های با کلاس col-3 */
+      width: 50%; /* تنظیم عرض به 50% */
+  }
+
+  .warm-items, .cool-items, .ice-items, .sandwich-items, .cake-items { /* استایل برای چند کلاس مختلف */
+      flex-wrap: wrap; /* اجازه به عناصر برای پیچیدن به خط بعدی */
+  }
+
+  #slidebar { /* استایل برای نوار کناری */
+      width: 40%; /* تنظیم عرض به 40% */
+  }
+}
+
+@media screen and (max-width: 576px) { /* تنظیمات برای نمایش در صفحه‌های کوچک‌تر از 576 پیکسل */
+ 
+  #header .col-2 { /* استایل برای ستون با کلاس col-2 در هدر */
+      width: 25%; /* تنظیم عرض به 25% */
+  }
+
+  #header .col-8 { /* استایل برای ستون با کلاس col-8 در هدر */
+      width: 50%; /* تنظیم عرض به 50% */
+  }
+
+  .searchbar-form input { /* استایل برای فیلد ورودی فرم جستجو */
+      width: 100%; /* تنظیم عرض به 100% */
+      font-size: 0.8em; /* اندازه فونت */
+  }
+
+  .icon2, .icon3 { /* استایل برای آیکون‌های با کلاس icon2 و icon3 */
+      width: 40%; /* تنظیم عرض به 40% */
+      padding: 10px 12px; /* فاصله داخلی: بالا و پایین، چپ و راست */
+  }
+
+  #category .item1 { /* استایل برای آیتم با کلاس item1 */
+      width: 100%; /* تنظیم عرض به 100% */
+      margin: 5px 20px; /* فاصله اطراف: بالا و پایین، چپ و راست */
+  }
+
+  .col-3 { /* استایل برای ستون‌های با کلاس col-3 */
+      width: 100%; /* تنظیم عرض به 100% */
+  }
+
+  .warm1, .cool1, .ice1, .sandwich1, .cake1 { /* استایل برای چند کلاس مختلف */
+      width: 85%; /* تنظیم عرض به 85% */
+      margin: 10px auto; /* فاصله اطراف: بالا و پایین، خودکار برای چپ و راست */
+  }
+
+  #slidebar { /* استایل برای نوار کناری */
+      width: 80%; /* تنظیم عرض به 80% */
+  }
+
+  .cart-item { /* استایل برای آیتم‌های سبد خرید */
+      flex-direction: column; /* چینش عمودی عناصر */
+      text-align: center; /* مرکز چینش متن */
+  }
+
+  .cart-item-image { /* استایل برای تصویر آیتم سبد خرید */
+      margin: 0 auto 10px; /* فاصله: خودکار برای چپ و راست، 10px پایین */
+  }
+
+  .remove-btn { /* استایل برای دکمه حذف */
+      position: static; /* موقعیت استاتیک */
+      margin-top: 10px; /* فاصله بالای 10px */
+  }
+}
+
+@media screen and (max-width: 375px) { /* تنظیمات برای نمایش در صفحه‌های کوچک‌تر از 375 پیکسل */
+
+  #header .logo img { /* استایل برای تصویر لوگو در هدر */
+      width: 100%; /* تنظیم عرض تصویر لوگو به 100% */
+  }
+
+  .searchbar-form input { /* استایل برای فیلد ورودی فرم جستجو */
+      padding: 8px; /* فاصله داخلی: 8px */
+  }
+
+  .icon2, .icon3 { /* استایل برای آیکون‌های با کلاس icon2 و icon3 */
+      width: 45%; /* تنظیم عرض به 45% */
+      padding: 8px 10px; /* فاصله داخلی: بالا و پایین، چپ و راست */
+  }
+
+  #category .item1 i { /* استایل برای آیکون داخل item1 */
+      padding: 12px 25px; /* فاصله داخلی: بالا و پایین، چپ و راست */
+      font-size: 2rem; /* اندازه فونت */
+      text-align: center; /* مرکز چینش متن */
+      margin: auto; /* خودکار برای چپ و راست */
+  }
+
+  .warm1, .cool1, .ice1, .sandwich1, .cake1 { /* استایل برای چند کلاس مختلف */
+      width: 90%; /* تنظیم عرض به 90% */
+  }
+
+  .warm1 .title, .cool1 .title, .ice1 .title, .sandwich1 .title, .cake1 .title { /* استایل برای عنوان‌های کلاس‌های مختلف */
+      font-size: 0.7rem; /* اندازه فونت */
+  }
+
+  #slidebar { /* استایل برای نوار کناری */
+      width: 90%; /* تنظیم عرض به 90% */
+  }
+}
+
+@media screen and (max-width: 1024px) { /* تنظیمات برای نمایش در صفحه‌های کوچک‌تر از 1024 پیکسل */
+  
+  .col-12 { /* استایل برای ستون با کلاس col-12 */
+      padding: 0 10px; /* فاصله داخلی: چپ و راست 10px */
+  }
+
+  #binPic, #category, #warm, #cool, #ice, #sandwich, #cake { /* استایل برای چند عنصر با آیدی مشخص */
+      margin-top: 70px; /* فاصله بالای 70px */
+  }
+
+  h4, h5 { /* استایل برای عناوین h4 و h5 */
+      font-size: 1.1em; /* اندازه فونت به 1.1em */
+  }
+
+  p { /* استایل برای پاراگراف‌ها */
+      font-size: 0.9em; /* اندازه فونت به 0.9em */
+  }
+
+  .footer { /* استایل برای فوتر */
+      margin-top: 6rem; /* فاصله بالای 6rem */
+  }
+
+  .footer-section { /* استایل برای بخش‌های فوتر */
+      padding: 0 15px; /* فاصله داخلی: چپ و راست 15px */
+  }
+}
+
